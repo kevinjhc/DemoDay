@@ -1,3 +1,8 @@
-UserMailer#contact_confirmation
+Hi <%= @user.name %>,
 
-<%= @greeting %>, find me in app/views/app/views/user_mailer/contact_confirmation.text.erb
+Thanks for reaching out to <%= @startup.name %>. Your contact information has been sent.
+You can also reach out directly:
+
+Company Name: <%= @startup.name %><%= "\r\n" %>
+CEO Name: <%= @startup.ceo_name %><%= "\r\n" %>
+Email: <%= @startup.email %>

@@ -19,7 +19,7 @@
           <%= link_to "Follow On Angellist", { :controller => "startups", :action => "follow", :angellist_id => startup.angellist_id }, :class => 'button alert radius expand' %>
         </div>
         <div class="small-6 columns no-right-padding">
-          <%= link_to "Email Contact Info", {}, :class => 'button alert radius expand' %>
+          <%= link_to "Email Contact Info", { :controller => "startups", :action => "send_email", :id => startup.id }, :class => 'button alert radius expand' %>
         </div>
         <% else %>
           <%= link_to "Contact Startup", {}, :class => 'button alert radius expand' %>

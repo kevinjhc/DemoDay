@@ -1,14 +1,18 @@
 class UserMailer < ActionMailer::Base
-  default from: "from@example.com"
+  default from: "\"TechStars Demo Day\" <demoday-noreply@sendgrid.me>"
 
-  # Subject can be set in your I18n file at config/locales/en.yml
-  # with the following lookup:
-  #
-  #   en.user_mailer.contact_confirmation.subject
-  #
-  def contact_confirmation
-    @greeting = "Hi"
+  def contact_confirmation(startup, user)
+    @startup = startup
+    @user = user
 
-    mail to: "to@example.org"
+    mail(:to => user.email, :reply_to => "\"#{startup.ceo_name}\" <#{startup.email}>", :subject => "Confirmation: Request sent to #{startup.name}")
   end
+
+  def startup_email(startup, user)
+    @startup = startup
+    @user = user
+
+    mail(:to => startup.email, :reply_to => "\"#{user.name}\" <#{user.email}>", :subject => "#{user.name} wants to connect")
+  end
+
 end

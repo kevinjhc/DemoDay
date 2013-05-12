@@ -1,0 +1,13 @@
+Hi <%= @startup.ceo_name %>,
+
+<%= @user.name %> is interested in speaking. Get in touch:
+
+Name: <%= @user.name %><%= "\r\n" %>
+Bio: <%= @user.bio %><%= "\r\n" %>
+Email: <%= @user.email %><%= "\r\n" %>
+<% if @user.linkedin %>
+LinkedIn: <%= @user.linkedin %><%= "\r\n" %>
+<% end %>
+<% if @user.twitter %>
+Twitter: <%= @user.twitter %>
+<% end %>

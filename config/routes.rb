@@ -4,6 +4,7 @@ Demoday::Application.routes.draw do
 
   resources :startups
   match '/follow', to: 'startups#follow'
+  match '/send_email', to: 'startups#send_email'
 
   match 'auth/:provider/callback', to: 'sessions#create'
   match 'auth/failure', to: redirect('/')

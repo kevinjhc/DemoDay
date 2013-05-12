@@ -43,4 +43,13 @@ class StartupsController < ApplicationController
     redirect_to root_path
   end
 
+  def send_email
+    @startup = Startup.find(params[:id])
+
+    UserMailer.contact_confirmation(@startup, current_user).deliver
+    UserMailer.startup_email(@startup, current_user).deliver
+
+    redirect_to root_path
+  end
+
 end
