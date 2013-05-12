@@ -1,21 +1,33 @@
 <div class="row startup-list">
   <% @startups.each do |startup| %>
 
-    <div class="large-6 columns text-center">
+    <div class="large-6 columns">
+      <div class="startup">
       
-      <img src="http://demodaybuddy.herokuapp.com/assets/fp.png">
+      <div class="row">
+        <img src="http://demodaybuddy.herokuapp.com/assets/fp.png">
 
-      <h3 class="startup-name"><%= startup.name %></h3>
-      <p class="ceo-name"><span class="pitched-by">Pitched By: </span><%= startup.ceo_name %></p>
+        <h3 class="startup-name"><%= startup.name %></h3>
+        <p class="ceo-name">
+          <span class="pitched-by">Pitched By: </span><br />
+          <%= startup.ceo_name %>
+        </p>
 
-      <% if current_user %>
-        <%= link_to "Follow Startup", { :controller => "startups", :action => "follow", :angellist_id => startup.angellist_id }, :class => 'button alert radius' %>
-        <%= link_to "Email Startup", {}, :class => 'button alert radius' %>
-      <% else %>
-        <%= link_to "Contact Startup", {}, :class => 'button alert radius' %>
+      </div>
+
+      <% if !current_user %>
+        <div class="small-6 columns no-left-padding">
+          <%= link_to "Follow Startup", { :controller => "startups", :action => "follow", :angellist_id => startup.angellist_id }, :class => 'button alert radius expand' %>
+        </div>
+        <div class="small-6 columns no-right-padding">
+          <%= link_to "Email Startup", {}, :class => 'button alert radius expand' %>
+        </div>
+        <% else %>
+          <%= link_to "Contact Startup", {}, :class => 'button alert radius expand' %>
       <% end %>
 
       <p class="bio"><%= startup.bio %></p>
+      </div>
     </div>
 
   <% end %>

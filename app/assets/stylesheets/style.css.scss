@@ -11,11 +11,19 @@ body {
 }
 
 .button {
-  font-size: 11px;
+  font-size: 10px;
   letter-spacing: 2px;
   margin: 20px 0;
   text-align: center;
   text-transform: uppercase;
+}
+
+.no-left-padding {
+  padding: 0 5px 0 0 !important;
+}
+
+.no-right-padding {
+  padding: 0 0 0 5px !important;
 }
 
 /* Header */
@@ -68,13 +76,22 @@ h5 { text-transform: uppercase; letter-spacing: 2px; }
 
 /* Startup List */
 
+.startup {
+  background-color: #fff;
+  border-radius: 3px;
+  margin: 10px auto;
+  padding: 20px;
+}
+
 .startup-list img {
-  width: 140px;
-  height: 140px;
+  width: 100px;
+  height: 100px;
+  float: left;
+  margin: 0 20px;
 }
 
 .startup-name {
-  color: #FFFFFF;
+  color: #333;
   font-size: 22px;
   font-weight: bold;
   letter-spacing: 2px;
@@ -83,13 +100,14 @@ h5 { text-transform: uppercase; letter-spacing: 2px; }
 }
 
 .pitched-by {
-  color: #eee;
+  color: #ccc;
 }
 
 .ceo-name {
-  color: #FFFFFF;
-  font-size: 11px !important;
-  letter-spacing: 3px;
+  color: #333;
+  font-size: 11px;
+  letter-spacing: 2px;
+  line-height: 14px;
   margin: 0;
   text-transform: uppercase;
 }
@@ -97,9 +115,7 @@ h5 { text-transform: uppercase; letter-spacing: 2px; }
 .bio {
   color: #333;
   font-size: 14px;
-  width: 90%;
   margin: 0 auto;
-  max-width: 500px;
 }
 
 /* Startup Admin */
@@ -108,3 +124,4 @@ h5 { text-transform: uppercase; letter-spacing: 2px; }
   width: 70px;
   height: 70px;
 }
+
