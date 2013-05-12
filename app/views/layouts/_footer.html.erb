@@ -1,0 +1,16 @@
+<div class="row">
+
+  <div class="dot-border"></div>
+
+  <div class="footer text-center">
+
+    <% if current_user %>
+      Signed in as <strong><%= current_user.name %></strong>!
+      <%= link_to "Sign out", signout_path, class: "button" %>
+    <% else %>
+      <%= link_to "Sign in with Angellist", "/auth/angellist", class: "button" %>
+    <% end %>
+
+  </div>
+  
+</div>

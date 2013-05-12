@@ -22,22 +22,13 @@
 
   <body>
 
-  <div id="header">
-    <div id="logo"></div>
-  </div>
-
-  <div class="triangle"></div>
+  <%= render 'layouts/header' %>
 
   <div id="content">
     <%= yield %>
   </div>
 
-  <% if current_user %>
-    Signed in as <strong><%= current_user.name %></strong>!
-    <%= link_to "Sign out", signout_path, id: "sign_out" %>
-  <% else %>
-    <%= link_to "Sign in with Angellist", "/auth/angellist", id: "sign_in" %>
-  <% end %>
+  <%= render 'layouts/footer' %>
 
     <%= javascript_include_tag "application" %>
 

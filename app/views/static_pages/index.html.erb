@@ -15,7 +15,8 @@
     </div>
 
     <div class="large-3 columns contact">
-      <%= link_to "Contact Startup", { :controller => "startups", :action => "follow", :angellist_id => startup.angellist_id }, :class => 'button' %>
+      <%= link_to "Follow Startup", { :controller => "startups", :action => "follow", :angellist_id => startup.angellist_id }, :class => 'button' %>
+      <%= link_to "Contact Startup", {}, :class => 'button' %>
     </div>
 
   <% end %>

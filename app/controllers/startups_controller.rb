@@ -13,7 +13,14 @@ class StartupsController < ApplicationController
     redirect_to startups_path
   end
 
+  def edit
+    @startup = Startup.find(params[:id])
+  end
+
   def update
+    @startup = Startup.find(params[:id])
+    @startup.update_attributes(params[:startup])
+    redirect_to startups_path
   end
 
   def destroy
@@ -35,4 +42,5 @@ class StartupsController < ApplicationController
 
     redirect_to root_path
   end
+
 end
