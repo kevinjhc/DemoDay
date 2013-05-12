@@ -127,3 +127,48 @@ h5 { text-transform: uppercase; letter-spacing: 2px; }
   margin: 0 auto;
   clear: both;
 }
+
+.nav {
+  text-align: center;
+  margin: 20px 0 0 0;
+}
+
+.nav a {
+  color: inherit;
+  margin: 0 20px;
+}
+
+.nav a:hover, .nav a:active {
+  color: #59AC53;
+}
+
+@font-face {
+  font-family: '-cons';
+  src: url('/assets/-cons.eot?34593744');
+  src: url('/assets/-cons.eot?34593744#iefix') format('embedded-opentype'),
+       url('/assets-cons.woff?34593744') format('woff'),
+       url('/assets/-cons.ttf?34593744') format('truetype'),
+       url('/assets/-cons.svg?34593744#-cons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+ 
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "-cons";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  margin-left: .2em;
+ 
+}
+ 
+.icon-map:before { content: '\e727'; } /* '' */
+.icon-users-1:before { content: '\e800'; } /* '' */
