@@ -22,7 +22,7 @@
           <%= link_to "Email Contact Info", { :controller => "startups", :action => "send_email", :id => startup.id }, :class => 'button alert radius expand' %>
         </div>
         <% else %>
-          <%= link_to "Contact Startup", {}, :class => 'button alert radius expand' %>
+          <%= link_to "Contact Startup", {}, :class => 'button alert radius expand', :'data-reveal-id' => 'signIn' %>
       <% end %>
 
       <p class="bio"><%= startup.bio %></p>
@@ -31,6 +31,13 @@
 
   <% end %>
 </div>
+
+<div id="signIn" class="reveal-modal text-center">
+  <%= link_to "Sign in with Angellist", "/auth/angellist", class: "button radius alert" %>
+  <a class="close-reveal-modal">&#215;</a>
+</div>
+
+
 
 <!--
 <div class="row">
