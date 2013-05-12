@@ -5,10 +5,10 @@
   <div class="footer text-center">
 
     <% if current_user %>
-      Signed in as <strong><%= current_user.name %></strong>!
-      <%= link_to "Sign out", signout_path, class: "button" %>
+      <p class="welcome">Hello, <strong><%= current_user.name %></strong>!</p>
+      <%= link_to "Sign out?", signout_path, class: "button radius alert" %>
     <% else %>
-      <%= link_to "Sign in with Angellist", "/auth/angellist", class: "button radius" %>
+      <%= link_to "Sign in with Angellist", "/auth/angellist", class: "button radius alert" %>
     <% end %>
 
   </div>

@@ -11,14 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130511225928) do
+ActiveRecord::Schema.define(:version => 20130512180323) do
 
   create_table "startups", :force => true do |t|
     t.string   "name"
     t.integer  "order"
     t.string   "email"
     t.string   "ceo_name"
-    t.string   "ceo_img_path"
     t.integer  "angellist_id"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false

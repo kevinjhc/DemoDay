@@ -4,15 +4,16 @@ body {
 }
 
 .dot-border {
-    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAEElEQVQImWP4////fwaCAACRlQP9mAgHgQAAAABJRU5ErkJggg==") repeat scroll 0 0 transparent;
-    height: 8px;
-    margin-top: 20px;
-    width: 100%;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAEElEQVQImWP4////fwaCAACRlQP9mAgHgQAAAABJRU5ErkJggg==") repeat scroll 0 0 transparent;
+  height: 8px;
+  margin-top: 20px;
+  width: 100%;
 }
 
 .button {
   font-size: 10px;
   letter-spacing: 2px;
+  line-height: 13px;
   margin: 20px 0;
   text-align: center;
   text-transform: uppercase;
@@ -24,6 +25,13 @@ body {
 
 .no-right-padding {
   padding: 0 0 0 5px !important;
+}
+
+.welcome {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 20px 0 -10px 0;
 }
 
 /* Header */
@@ -88,6 +96,7 @@ h5 { text-transform: uppercase; letter-spacing: 2px; }
   height: 100px;
   float: left;
   margin: 0 20px;
+  border-radius: 50%;
 }
 
 .startup-name {
@@ -100,7 +109,7 @@ h5 { text-transform: uppercase; letter-spacing: 2px; }
 }
 
 .pitched-by {
-  color: #ccc;
+  color: #b8b8b8;
 }
 
 .ceo-name {
@@ -116,12 +125,5 @@ h5 { text-transform: uppercase; letter-spacing: 2px; }
   color: #333;
   font-size: 14px;
   margin: 0 auto;
+  clear: both;
 }
-
-/* Startup Admin */
-
-.startup-add img {
-  width: 70px;
-  height: 70px;
-}
-
