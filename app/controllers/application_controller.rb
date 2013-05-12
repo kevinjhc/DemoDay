@@ -12,4 +12,19 @@ class ApplicationController < ActionController::Base
   end
   helper_method :current_user
 
+  helper_method :admin?
+
+  protected
+
+  def admin?
+    current_user && current_user.admin
+  end
+
+  def authorize
+    unless admin?
+      redirect_to root_path
+      false
+    end
+  end
+
 end

@@ -1,5 +1,9 @@
 class StartupsController < ApplicationController
+
+  before_filter :authorize, :except => [:follow, :send_email]
+
   def index
+    redirect_to root_path
     @startups = Startup.find(:all, :order => 'presentation_order')
   end
 

@@ -1,3 +1,9 @@
+<% if current_user && current_user.admin %>
+  <div class="text-center">
+    <%= link_to "Add Startup", new_startup_path(), :class => 'button alert radius' %>
+  </div>
+<% end %>
+
 <div class="row startup-list">
   <% @startups.each do |startup| %>
 
@@ -8,24 +14,51 @@
         <%= image_tag(startup.img_url) %>
 
         <h3 class="startup-name"><%= startup.name %></h3>
-        <p class="ceo-name">
-          <span class="pitched-by">Pitched By: </span><br />
-          <%= startup.ceo_name %>
-        </p>
+        <% if current_user && current_user.admin %>
+           <p class="ceo-name">
+            <span class="pitched-by">Pitched By: </span><%= startup.ceo_name %><br />
+            <span class="pitched-by">Order: </span><%= startup.presentation_order %><br />
+            <%= startup.email %>
+          </p>
+        <% else %>
+          <p class="ceo-name">
+            <span class="pitched-by">Pitched By: </span><br />
+            <%= startup.ceo_name %>
+          </p>
+        <% end %>
+
       </div>
 
-      <% if current_user %>
+      <% if current_user && current_user.admin %>
+
         <div class="small-6 columns no-left-padding">
-          <%= link_to "Follow On Angellist", { :controller => "startups", :action => "follow", :angellist_id => startup.angellist_id }, :class => 'button alert radius expand' %>
+          <%= link_to "Edit", edit_startup_path(startup), :class => 'button radius alert expand' %>
         </div>
         <div class="small-6 columns no-right-padding">
-          <%= link_to "Email Contact Info", { :controller => "startups", :action => "send_email", :id => startup.id }, :class => 'button alert radius expand' %>
+          <%= link_to "Delete", startup_path(startup), :method => :delete, :class => 'button radius alert expand' %>
         </div>
+
+      <% else %>
+
+        <% if current_user %>
+
+          <div class="small-6 columns no-left-padding">
+            <%= link_to "Follow On Angellist", { :controller => "startups", :action => "follow", :angellist_id => startup.angellist_id }, :class => 'button alert radius expand' %>
+          </div>
+          <div class="small-6 columns no-right-padding">
+            <%= link_to "Email Contact Info", { :controller => "startups", :action => "send_email", :id => startup.id }, :class => 'button alert radius expand' %>
+          </div>
+
         <% else %>
+
           <%= link_to "Contact Startup", {}, :class => 'button alert radius expand', :'data-reveal-id' => 'signIn' %>
+
+        <% end %>
+
       <% end %>
 
       <p class="bio"><%= startup.bio %></p>
+
       </div>
     </div>
 
