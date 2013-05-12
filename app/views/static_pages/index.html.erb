@@ -1,0 +1,23 @@
+<div class="row">
+
+  <% @startups.each do |startup| %>
+
+    <div class="large-4 columns">
+      <img class="left" src="http://demodaybuddy.herokuapp.com/assets/fp.png">
+      <div class="left">
+        <h3><%= startup.name %></h3>
+        <h5>Pitched by:<br/><%= startup.ceo_name %></h5>
+      </div>
+    </div>
+
+    <div class="large-5 columns description">
+      <p><%= startup.bio %></p>
+    </div>
+
+    <div class="large-3 columns contact">
+      <%= link_to "Contact Startup", { :controller => "startups", :action => "follow", :angellist_id => startup.angellist_id }, :class => 'button' %>
+    </div>
+
+  <% end %>
+
+</div>

@@ -1,0 +1,66 @@
+body {
+  border-top: 4px solid #59AC53;
+}
+
+/* Header */
+
+#header {
+  background-color: #FDFAF6;
+  margin: 0;
+  width: 100%;
+  padding: 10px 0 20px;
+}
+
+#logo {
+  background-image: url(/assets/sprites.png);
+  width: 85px;
+  height: 42px;
+  margin: 0 auto;
+}
+
+.triangle {
+  background-image: url(/assets/sprites.png);
+  background-position: -17px 16px;
+  height: 17px;
+  margin: 0 auto 10px;
+  width: 54px;
+}
+
+/* Startup List */
+
+#content .row {
+  border: 1px solid #eee;
+  background-color: #FDFAF6;
+  border-radius: 3px;
+  width: 95%;
+  margin-bottom: 10px;
+}
+
+.description {
+  display: table; height: 80px; position: relative;
+}
+.description p {
+  display: table-cell; vertical-align: middle;
+}
+
+h5 { text-transform: uppercase; letter-spacing: 2px; }
+
+.contact .button {
+  margin-top: 25px;
+  background-color: #C60F13;
+  border-color: #970B0E;
+  box-shadow: none;
+  color: white;
+  opacity: 0.6;
+}
+
+#content img {
+  width: 60px;
+  margin: 10px;
+}
+
+/* Footer */
+
+.sign-in {
+  
+}
