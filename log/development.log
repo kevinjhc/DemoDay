@@ -92375,3 +92375,388 @@ Served asset /pillpack.jpg - 304 Not Modified (0ms)
 
 Started GET "/assets/sprites.png" for 127.0.0.1 at 2013-05-12 18:42:14 -0400
 Served asset /sprites.png - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/startups/1/edit" for 127.0.0.1 at 2013-05-12 18:44:31 -0400
+Processing by StartupsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (23.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mStartup Load (0.1ms)[0m  SELECT "startups".* FROM "startups" WHERE "startups"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered startups/_form.html.erb (9.2ms)
+  Rendered startups/edit.html.erb within layouts/application (15.0ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 168ms (Views: 100.8ms | ActiveRecord: 26.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-12 18:44:31 -0400
+Served asset /application.css - 304 Not Modified (14ms)
+
+
+Started GET "/assets/foundation_and_overrides.css?body=1" for 127.0.0.1 at 2013-05-12 18:44:31 -0400
+Served asset /foundation_and_overrides.css - 304 Not Modified (34ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-05-12 18:44:31 -0400
+Served asset /style.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-12 18:44:31 -0400
+Served asset /jquery.js - 304 Not Modified (14ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-12 18:44:31 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2013-05-12 18:44:31 -0400
+Served asset /foundation/foundation.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/foundation/foundation.alerts.js?body=1" for 127.0.0.1 at 2013-05-12 18:44:31 -0400
+Served asset /foundation/foundation.alerts.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2013-05-12 18:44:31 -0400
+Served asset /foundation/foundation.clearing.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/foundation/foundation.cookie.js?body=1" for 127.0.0.1 at 2013-05-12 18:44:31 -0400
+Served asset /foundation/foundation.cookie.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2013-05-12 18:44:31 -0400
+Served asset /foundation/foundation.dropdown.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/foundation/foundation.forms.js?body=1" for 127.0.0.1 at 2013-05-12 18:44:31 -0400
+Served asset /foundation/foundation.forms.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2013-05-12 18:44:31 -0400
+Served asset /foundation/foundation.joyride.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2013-05-12 18:44:31 -0400
+Served asset /foundation/foundation.magellan.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2013-05-12 18:44:31 -0400
+Served asset /foundation/foundation.orbit.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/foundation/foundation.placeholder.js?body=1" for 127.0.0.1 at 2013-05-12 18:44:31 -0400
+Served asset /foundation/foundation.placeholder.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2013-05-12 18:44:31 -0400
+Served asset /foundation/foundation.reveal.js - 304 Not Modified (35ms)
+
+
+Started GET "/assets/foundation/foundation.section.js?body=1" for 127.0.0.1 at 2013-05-12 18:44:31 -0400
+Served asset /foundation/foundation.section.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/foundation/foundation.tooltips.js?body=1" for 127.0.0.1 at 2013-05-12 18:44:31 -0400
+Served asset /foundation/foundation.tooltips.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2013-05-12 18:44:31 -0400
+Served asset /foundation/foundation.topbar.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/foundation/index.js?body=1" for 127.0.0.1 at 2013-05-12 18:44:31 -0400
+Served asset /foundation/index.js - 304 Not Modified (18ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-05-12 18:44:32 -0400
+Served asset /static_pages.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/startups.js?body=1" for 127.0.0.1 at 2013-05-12 18:44:32 -0400
+Served asset /startups.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-12 18:44:32 -0400
+Served asset /application.js - 304 Not Modified (19ms)
+
+
+Started GET "/assets/sprites.png" for 127.0.0.1 at 2013-05-12 18:44:32 -0400
+Served asset /sprites.png - 304 Not Modified (1ms)
+
+
+Started GET "/startups/new" for 127.0.0.1 at 2013-05-12 18:44:34 -0400
+Processing by StartupsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered startups/_form.html.erb (3.8ms)
+  Rendered startups/new.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 29ms (Views: 26.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-12 18:44:35 -0400
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/foundation_and_overrides.css?body=1" for 127.0.0.1 at 2013-05-12 18:44:35 -0400
+Served asset /foundation_and_overrides.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-05-12 18:44:35 -0400
+Served asset /style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.alerts.js?body=1" for 127.0.0.1 at 2013-05-12 18:44:35 -0400
+Served asset /foundation/foundation.alerts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2013-05-12 18:44:35 -0400
+Served asset /foundation/foundation.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2013-05-12 18:44:35 -0400
+Served asset /foundation/foundation.clearing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-12 18:44:35 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.cookie.js?body=1" for 127.0.0.1 at 2013-05-12 18:44:35 -0400
+Served asset /foundation/foundation.cookie.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-12 18:44:35 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2013-05-12 18:44:35 -0400
+Served asset /foundation/foundation.dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.forms.js?body=1" for 127.0.0.1 at 2013-05-12 18:44:35 -0400
+Served asset /foundation/foundation.forms.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2013-05-12 18:44:35 -0400
+Served asset /foundation/foundation.joyride.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2013-05-12 18:44:35 -0400
+Served asset /foundation/foundation.magellan.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.placeholder.js?body=1" for 127.0.0.1 at 2013-05-12 18:44:35 -0400
+Served asset /foundation/foundation.placeholder.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2013-05-12 18:44:35 -0400
+Served asset /foundation/foundation.orbit.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2013-05-12 18:44:35 -0400
+Served asset /foundation/foundation.reveal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.section.js?body=1" for 127.0.0.1 at 2013-05-12 18:44:35 -0400
+Served asset /foundation/foundation.section.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.tooltips.js?body=1" for 127.0.0.1 at 2013-05-12 18:44:35 -0400
+Served asset /foundation/foundation.tooltips.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2013-05-12 18:44:35 -0400
+Served asset /foundation/foundation.topbar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/index.js?body=1" for 127.0.0.1 at 2013-05-12 18:44:35 -0400
+Served asset /foundation/index.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/startups.js?body=1" for 127.0.0.1 at 2013-05-12 18:44:35 -0400
+Served asset /startups.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-05-12 18:44:35 -0400
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-12 18:44:35 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sprites.png" for 127.0.0.1 at 2013-05-12 18:44:35 -0400
+Served asset /sprites.png - 304 Not Modified (0ms)
+
+
+Started GET "/startups/" for 127.0.0.1 at 2013-05-12 18:44:43 -0400
+Processing by StartupsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+Redirected to http://127.0.0.1:3000/
+  [1m[36mStartup Load (0.4ms)[0m  [1mSELECT "startups".* FROM "startups" ORDER BY presentation_order[0m
+Completed 302 Found in 5ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-12 18:44:43 -0400
+Processing by StaticPagesController#index as HTML
+  [1m[35mStartup Load (0.3ms)[0m  SELECT "startups".* FROM "startups" 
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered static_pages/index.html.erb within layouts/application (23.8ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 62ms (Views: 59.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-12 18:44:43 -0400
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/foundation_and_overrides.css?body=1" for 127.0.0.1 at 2013-05-12 18:44:43 -0400
+Served asset /foundation_and_overrides.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2013-05-12 18:44:43 -0400
+Served asset /style.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/checkio.jpg" for 127.0.0.1 at 2013-05-12 18:44:43 -0400
+Served asset /checkio.jpg - 304 Not Modified (1ms)
+
+
+Started GET "/assets/codeship.jpg" for 127.0.0.1 at 2013-05-12 18:44:43 -0400
+Served asset /codeship.jpg - 304 Not Modified (2ms)
+
+
+Started GET "/assets/synack.jpg" for 127.0.0.1 at 2013-05-12 18:44:43 -0400
+Served asset /synack.jpg - 304 Not Modified (1ms)
+
+
+Started GET "/assets/constrvct.jpg" for 127.0.0.1 at 2013-05-12 18:44:43 -0400
+Served asset /constrvct.jpg - 304 Not Modified (2ms)
+
+
+Started GET "/assets/courbanize.jpg" for 127.0.0.1 at 2013-05-12 18:44:43 -0400
+Served asset /courbanize.jpg - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-12 18:44:43 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.js?body=1" for 127.0.0.1 at 2013-05-12 18:44:43 -0400
+Served asset /foundation/foundation.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-12 18:44:43 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.alerts.js?body=1" for 127.0.0.1 at 2013-05-12 18:44:43 -0400
+Served asset /foundation/foundation.alerts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.clearing.js?body=1" for 127.0.0.1 at 2013-05-12 18:44:43 -0400
+Served asset /foundation/foundation.clearing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.cookie.js?body=1" for 127.0.0.1 at 2013-05-12 18:44:43 -0400
+Served asset /foundation/foundation.cookie.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.dropdown.js?body=1" for 127.0.0.1 at 2013-05-12 18:44:43 -0400
+Served asset /foundation/foundation.dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.joyride.js?body=1" for 127.0.0.1 at 2013-05-12 18:44:43 -0400
+Served asset /foundation/foundation.joyride.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.magellan.js?body=1" for 127.0.0.1 at 2013-05-12 18:44:43 -0400
+Served asset /foundation/foundation.magellan.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.forms.js?body=1" for 127.0.0.1 at 2013-05-12 18:44:43 -0400
+Served asset /foundation/foundation.forms.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.orbit.js?body=1" for 127.0.0.1 at 2013-05-12 18:44:43 -0400
+Served asset /foundation/foundation.orbit.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.placeholder.js?body=1" for 127.0.0.1 at 2013-05-12 18:44:43 -0400
+Served asset /foundation/foundation.placeholder.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.reveal.js?body=1" for 127.0.0.1 at 2013-05-12 18:44:43 -0400
+Served asset /foundation/foundation.reveal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.topbar.js?body=1" for 127.0.0.1 at 2013-05-12 18:44:43 -0400
+Served asset /foundation/foundation.topbar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.section.js?body=1" for 127.0.0.1 at 2013-05-12 18:44:43 -0400
+Served asset /foundation/foundation.section.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/foundation.tooltips.js?body=1" for 127.0.0.1 at 2013-05-12 18:44:43 -0400
+Served asset /foundation/foundation.tooltips.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/foundation/index.js?body=1" for 127.0.0.1 at 2013-05-12 18:44:43 -0400
+Served asset /foundation/index.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/startups.js?body=1" for 127.0.0.1 at 2013-05-12 18:44:43 -0400
+Served asset /startups.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-12 18:44:43 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/static_pages.js?body=1" for 127.0.0.1 at 2013-05-12 18:44:43 -0400
+Served asset /static_pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fancred.jpg" for 127.0.0.1 at 2013-05-12 18:44:43 -0400
+Served asset /fancred.jpg - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jebbit.jpg" for 127.0.0.1 at 2013-05-12 18:44:43 -0400
+Served asset /jebbit.jpg - 304 Not Modified (4ms)
+
+
+Started GET "/assets/freightfarms.jpg" for 127.0.0.1 at 2013-05-12 18:44:43 -0400
+Served asset /freightfarms.jpg - 304 Not Modified (2ms)
+
+
+Started GET "/assets/linkcycle.jpg" for 127.0.0.1 at 2013-05-12 18:44:43 -0400
+Served asset /linkcycle.jpg - 304 Not Modified (5ms)
+
+
+Started GET "/assets/neurala.jpg" for 127.0.0.1 at 2013-05-12 18:44:43 -0400
+Served asset /neurala.jpg - 304 Not Modified (1ms)
+
+
+Started GET "/assets/outline.jpg" for 127.0.0.1 at 2013-05-12 18:44:43 -0400
+Served asset /outline.jpg - 304 Not Modified (2ms)
+
+
+Started GET "/assets/pillpack.jpg" for 127.0.0.1 at 2013-05-12 18:44:43 -0400
+Served asset /pillpack.jpg - 304 Not Modified (1ms)
+
+
+Started GET "/assets/rallyt.jpg" for 127.0.0.1 at 2013-05-12 18:44:43 -0400
+Served asset /rallyt.jpg - 304 Not Modified (2ms)
+
+
+Started GET "/assets/qunb.jpg" for 127.0.0.1 at 2013-05-12 18:44:43 -0400
+Served asset /qunb.jpg - 304 Not Modified (2ms)
+
+
+Started GET "/assets/sprites.png" for 127.0.0.1 at 2013-05-12 18:44:44 -0400
+Served asset /sprites.png - 304 Not Modified (0ms)
