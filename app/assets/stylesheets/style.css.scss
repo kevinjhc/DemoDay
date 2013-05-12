@@ -150,3 +150,11 @@ body {
  
 .icon-map:before { content: '\e727'; } /* '' */
 .icon-users-1:before { content: '\e800'; } /* '' */
+
+/* Map */
+
+.map {
+  margin-top: -27px;
+  position: relative;
+  z-index: -1;
+}
