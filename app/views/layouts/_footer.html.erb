@@ -8,7 +8,7 @@
       Signed in as <strong><%= current_user.name %></strong>!
       <%= link_to "Sign out", signout_path, class: "button" %>
     <% else %>
-      <%= link_to "Sign in with Angellist", "/auth/angellist", class: "button" %>
+      <%= link_to "Sign in with Angellist", "/auth/angellist", class: "button radius" %>
     <% end %>
 
   </div>

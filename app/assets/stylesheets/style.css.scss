@@ -1,5 +1,6 @@
 body {
   border-top: 4px solid #59AC53;
+  overflow-y: scroll;
 }
 
 .dot-border {
@@ -41,8 +42,7 @@ body {
   width: 54px;
 }
 
-/* Startup List */
-
+/*  Old Startup List 
 #content .row {
   border: 1px solid #eee;
   background-color: #FDFAF6;
@@ -63,4 +63,48 @@ h5 { text-transform: uppercase; letter-spacing: 2px; }
 #content img {
   width: 60px;
   margin: 10px;
+}
+*/
+
+/* Startup List */
+
+.startup-list img {
+  width: 140px;
+  height: 140px;
+}
+
+.startup-name {
+  color: #FFFFFF;
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  line-height: 24px;
+  margin: 5px 0;
+}
+
+.pitched-by {
+  color: #eee;
+}
+
+.ceo-name {
+  color: #FFFFFF;
+  font-size: 11px !important;
+  letter-spacing: 3px;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.bio {
+  color: #333;
+  font-size: 14px;
+  width: 90%;
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+/* Startup Admin */
+
+.startup-add img {
+  width: 70px;
+  height: 70px;
 }

@@ -1,3 +1,27 @@
+<div class="row startup-list">
+  <% @startups.each do |startup| %>
+
+    <div class="large-6 columns text-center">
+      
+      <img src="http://demodaybuddy.herokuapp.com/assets/fp.png">
+
+      <h3 class="startup-name"><%= startup.name %></h3>
+      <p class="ceo-name"><span class="pitched-by">Pitched By: </span><%= startup.ceo_name %></p>
+
+      <% if current_user %>
+        <%= link_to "Follow Startup", { :controller => "startups", :action => "follow", :angellist_id => startup.angellist_id }, :class => 'button alert radius' %>
+        <%= link_to "Email Startup", {}, :class => 'button alert radius' %>
+      <% else %>
+        <%= link_to "Contact Startup", {}, :class => 'button alert radius' %>
+      <% end %>
+
+      <p class="bio"><%= startup.bio %></p>
+    </div>
+
+  <% end %>
+</div>
+
+<!--
 <div class="row">
 
   <% @startups.each do |startup| %>
@@ -15,10 +39,15 @@
     </div>
 
     <div class="large-3 columns contact">
-      <%= link_to "Follow Startup", { :controller => "startups", :action => "follow", :angellist_id => startup.angellist_id }, :class => 'button' %>
-      <%= link_to "Contact Startup", {}, :class => 'button' %>
+      <% if !current_user %>
+        <%= link_to "Follow Startup", { :controller => "startups", :action => "follow", :angellist_id => startup.angellist_id }, :class => 'button success radius' %>
+        <%= link_to "Email Startup", {}, :class => 'button success radius' %>
+      <% else %>
+        <%= link_to "Contact Startup", {}, :class => 'button success radius' %>
+      <% end %>
     </div>
 
   <% end %>
 
 </div>
+-->

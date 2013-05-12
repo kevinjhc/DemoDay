@@ -1,26 +1,24 @@
-<%= link_to "Add Startup", new_startup_path() %>
+<div class="text-center">
+  <%= link_to "Add Startup", new_startup_path(), :class => 'button radius' %>
+</div>
 
-<div class="row">
-
+<div class="row startup-add">
   <% @startups.each do |startup| %>
 
-    <div class="large-4 columns">
-      <img class="left" src="http://demodaybuddy.herokuapp.com/assets/fp.png">
-      <div class="left">
-        <h3><%= startup.name %></h3>
-        <h5>Pitched by:<br/><%= startup.ceo_name %></h5>
-      </div>
+    <div class="large-4 columns text-center">
+      <img src="http://demodaybuddy.herokuapp.com/assets/fp.png">
+      <h3 class="startup-name"><%= startup.name %></h3>
+      <p class="ceo-name"><span class="pitched-by">Pitched By: </span><%= startup.ceo_name %></p>
     </div>
 
-    <div class="large-5 columns description">
-      <p><%= startup.bio %></p>
+    <div class="large-5 columns">
+      <p class="bio"><%= startup.bio %></p>
     </div>
 
-    <div class="large-3 columns contact">
-      <%= link_to "Edit", edit_startup_path(startup), :class => 'button radius small' %>
-      <%= link_to "Delete", startup_path(startup), :method => :delete, :class => 'button radius small' %>
+    <div class="large-3 columns text-center">
+      <%= link_to "Edit", edit_startup_path(startup), :class => 'button radius' %>
+      <%= link_to "Delete", startup_path(startup), :method => :delete, :class => 'button radius' %>
     </div>
 
   <% end %>
-
 </div>
