@@ -1,6 +1,6 @@
 Demoday::Application.routes.draw do
   
-  match '/map', to: 'static_page#map'
+  match '/map', to: 'static_pages#map'
 
   resources :startups
   match '/follow', to: 'startups#follow'
