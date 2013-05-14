@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130513210258) do
+ActiveRecord::Schema.define(:version => 20130512221338) do
 
   create_table "startups", :force => true do |t|
     t.string   "name"
@@ -26,17 +26,17 @@ ActiveRecord::Schema.define(:version => 20130513210258) do
 
   create_table "users", :force => true do |t|
     t.string   "provider"
-    t.integer  "uid",         :limit => 255
+    t.string   "uid"
     t.string   "name"
     t.string   "oauth_token"
-    t.datetime "created_at",                                    :null => false
-    t.datetime "updated_at",                                    :null => false
-    t.boolean  "investor",                   :default => false
+    t.datetime "created_at",                     :null => false
+    t.datetime "updated_at",                     :null => false
+    t.boolean  "investor",    :default => false
     t.string   "email"
     t.string   "twitter"
     t.string   "linkedin"
     t.string   "bio"
-    t.boolean  "admin",                      :default => false
+    t.boolean  "admin",       :default => false
   end
 
 end
