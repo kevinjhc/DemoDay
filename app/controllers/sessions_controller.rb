@@ -11,6 +11,10 @@ class SessionsController < ApplicationController
     session[:oauth_token] = nil
     redirect_to root_url
   end
+
+  def failure
+    redirect_to root_path, alert: "Authentication failed, please try again."
+  end
 end
 
 =begin

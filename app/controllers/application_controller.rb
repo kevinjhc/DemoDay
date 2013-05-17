@@ -12,13 +12,12 @@ class ApplicationController < ActionController::Base
   end
   helper_method :current_user
 
-  helper_method :admin?
-
   protected
 
   def admin?
     current_user && current_user.admin
   end
+  helper_method :admin?
 
   def authorize
     unless admin?

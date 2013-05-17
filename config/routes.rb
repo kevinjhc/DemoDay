@@ -1,5 +1,5 @@
 Demoday::Application.routes.draw do
-  
+
   root :to => 'static_pages#index'
 
   match '/map', to: 'static_pages#map'
@@ -10,7 +10,10 @@ Demoday::Application.routes.draw do
 
   # Angellist Oauth
   match 'auth/:provider/callback', to: 'sessions#create'
-  match 'auth/failure', to: redirect('/')
+  match 'auth/failure', to: 'sessions#failure'
   match 'signout', to: 'sessions#destroy', as: 'signout'
 
+  # Omniauth Identities registration
+  resources :identities
+  
 end

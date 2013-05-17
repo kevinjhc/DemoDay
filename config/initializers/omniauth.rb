@@ -6,4 +6,10 @@ Rails.application.config.middleware.use OmniAuth::Builder do
   elsif Rails.env.development?
     provider :angellist, '9fcaaeb6b432956f86ddb1ec0481052d', '1b511416e0ed6d3056b393968ce31f7b', :scope => 'email'
   end
+  provider :identity,
+    on_failed_registration: lambda { |env| IdentitiesController.action(:new).call(env) }
 end
+
+OmniAuth.config.on_failure = Proc.new { |env|
+  OmniAuth::FailureEndpoint.new(env).redirect_to_failure
+}

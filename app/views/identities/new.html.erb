@@ -1,0 +1,32 @@
+<div class="row">
+  <%= form_tag "/auth/identity/register", class: "register-form" do %>
+
+    <div class="large-4 small-centered columns text-center width-90">
+
+      <% if @identity && @identity.errors.any? %>
+        <div class="error_messages">
+          <% @identity.errors.full_messages.each do |msg| %>
+            <div data-alert class="alert-box radius alert">
+              <%= msg %>
+              <a href="#" class="close">&times;</a>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+
+      <%= label_tag :name %>
+      <%= text_field_tag :name, @identity.try(:name) %>
+
+      <%= label_tag :email %>
+      <%= text_field_tag :email, @identity.try(:email) %>
+
+      <%= label_tag :password %>
+      <%= password_field_tag :password %>
+
+      <%= label_tag :password_confirmation %>
+      <%= password_field_tag :password_confirmation %>
+
+      <%= submit_tag "Register", class: "button radius alert" %><br />
+    </div>
+  <% end %>
+</div>

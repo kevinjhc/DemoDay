@@ -5,6 +5,16 @@
 <% end %>
 
 <div class="row startup-list">
+
+  <div class="large-6 columns">
+    <% if alert %>
+      <div data-alert class="alert-box radius alert">
+        <%= alert %>
+        <a href="#" class="close">&times;</a>
+      </div>
+    <% end %>
+  </div>
+
   <% @startups.each do |startup| %>
 
     <div class="large-6 columns">
@@ -65,7 +75,7 @@
   <% end %>
 </div>
 
-<div id="signIn" class="reveal-modal text-center">
-  <%= link_to "Sign in with Angellist", "/auth/angellist", class: "button radius alert" %>
+<div id="signIn" class="reveal-modal small text-center">
+  <%= render 'layouts/login_form' %>
   <a class="close-reveal-modal">&#215;</a>
 </div>

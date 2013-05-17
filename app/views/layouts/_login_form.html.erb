@@ -1,0 +1,24 @@
+<%= link_to "Sign in with Angellist", "/auth/angellist", class: "button radius alert angellist" %>
+
+<h6 class="or">OR</h6>
+
+<div id="email-login">
+  <%= submit_tag "Login via email", class: "button radius alert email-button" %>
+
+  <%= form_tag "/auth/identity/callback", class: "email-form" do %>
+
+    <div class="large-4 small-centered columns width-90">
+      <%= label_tag :auth_key, "Email" %>
+      <%= text_field_tag :auth_key %>
+
+      <%= label_tag :password, "Password" %>
+      <%= password_field_tag :password %>
+
+      <%= submit_tag "Login", class: "button radius alert" %>
+    </div>
+
+  <% end %>
+
+  <br />
+  <%= link_to "Create an account?", new_identity_path, class: 'create-account' %>
+</div>

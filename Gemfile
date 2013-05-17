@@ -4,8 +4,10 @@ gem 'rails', '3.2.13'
 
 gem 'pg'
 
-
 gem 'omniauth-angellist'
+gem 'omniauth-identity'
+
+gem 'bcrypt-ruby', '~> 3.0.0'
 
 group :development do
   gem 'pry'

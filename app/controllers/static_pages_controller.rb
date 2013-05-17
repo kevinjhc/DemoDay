@@ -1,6 +1,6 @@
 class StaticPagesController < ApplicationController
   def index
-    @startups = Startup.all
+    @startups = Startup.find(:all, :order => 'presentation_order')
   end
 
   def map

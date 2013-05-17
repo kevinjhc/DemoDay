@@ -8,7 +8,7 @@
       <p class="welcome">Hello, <strong><%= current_user.name %></strong>!</p>
       <%= link_to "Sign out?", signout_path, class: "button radius alert" %>
     <% else %>
-      <%= link_to "Sign in with Angellist", "/auth/angellist", class: "button radius alert" %>
+      <%= render 'layouts/login_form' unless(params[:controller] == 'identities' && params[:action] == 'new')%>
     <% end %>
 
   </div>
