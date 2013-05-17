@@ -64,4 +64,14 @@ Demoday::Application.configure do
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :user_name => "TechStars",
+    :password => "F4:f*rWi6",
+    :domain => "techstars.com",
+    :address => "smtp.sendgrid.net",
+    :port => 587,
+    :authentication => :plain
+  }
 end
