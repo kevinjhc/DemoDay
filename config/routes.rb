@@ -15,5 +15,8 @@ Demoday::Application.routes.draw do
 
   # Omniauth Identities registration
   resources :identities
+
+  match '/admin', to: 'admin#index'
+  match '/become_admin', to: 'admin#become_admin'
   
 end

@@ -1,0 +1,24 @@
+<div class="row">
+
+<% if alert %>
+<div class="row">
+  <div class="large-12 columns width-90">
+    <div data-alert class="alert-box radius alert">
+      <%= alert %>
+      <a href="#" class="close">&times;</a>
+    </div>
+  </div>
+</div>
+<% end %>
+
+  <%= form_tag :controller => "admin", :action => "become_admin" do %>
+
+    <div class="large-4 small-centered columns text-center width-90">
+
+      <%= label_tag 'Admin Password' %>
+      <%= password_field_tag :password %>
+
+      <%= submit_tag "Become Admin", class: "button radius alert" %><br />
+    </div>
+  <% end %>
+</div>

@@ -12,6 +12,11 @@ class ApplicationController < ActionController::Base
   end
   helper_method :current_user
 
+  def angellist_user?
+    current_user.provider == 'angellist'
+  end
+  helper_method :angellist_user?
+
   protected
 
   def admin?
@@ -21,6 +26,13 @@ class ApplicationController < ActionController::Base
 
   def authorize
     unless admin?
+      redirect_to root_path
+      false
+    end
+  end
+
+  def signed_in?
+    unless current_user
       redirect_to root_path
       false
     end

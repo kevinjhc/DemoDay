@@ -3,7 +3,9 @@ Hi <%= @startup.ceo_name %>,
 <%= @user.name %> is interested in speaking. Get in touch:
 
 Name: <%= @user.name %><%= "\r\n" %>
+<% if @user.bio %>
 Bio: <%= @user.bio %><%= "\r\n" %>
+<% end %>
 Email: <%= @user.email %><%= "\r\n" %>
 <% if @user.linkedin %>
 LinkedIn: <%= @user.linkedin %><%= "\r\n" %>
