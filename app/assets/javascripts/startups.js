@@ -1,3 +1,4 @@
+/*
 $('#pull-from-angellist').on('click', function() {
   var domainUrl = $('#startup_domain_url').val();
 
@@ -77,8 +78,8 @@ $('#pull-from-angellist').on('click', function() {
 
 
 });
+*/
 
-/*
 $('#pull-from-angellist').on('click', function() {
   var angellist_id = $('#startup_angellist_id').val();
 
@@ -108,7 +109,6 @@ $('#pull-from-angellist').on('click', function() {
     // show error
   }
 });
-*/
 
 
 $('.email-button').on('click', function(e) {
