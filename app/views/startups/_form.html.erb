@@ -2,16 +2,17 @@
   <div class="large-5 small-centered columns text-center">
     <button id="pull-from-angellist" class="button alert radius">Pull Info From Angellist</button>
 
+  
+    <br /><br />
+
+    <%= form_for @startup do |f| %>
+
     <div class="row">
-      <div class="large-6 columns">
+      <div class="large-6 small-centered columns">
         <%= f.label "Angellist Id:" %>
         <%= f.text_field :angellist_id %>
       </div>
     </div>
-
-    <br /><br /><br />
-
-    <%= form_for @startup do |f| %>
 
       <div class="row">
 
