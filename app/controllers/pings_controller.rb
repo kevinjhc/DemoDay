@@ -22,16 +22,5 @@ class PingsController < ApplicationController
 
     redirect_to root_path
   end
-
-  def following
-    require 'net/http'
-    $angel_api = Net::HTTP.new("api.angel.co", 443)
-    $angel_api.use_ssl = true
-    angel_response = $angel_api.request(Net::HTTP::Get.new("/1/users/#{current_user.uid}/following/ids?type=startup"))
-
-    if angel_response.code.to_i == 200
-      @follows = JSON.parse(angel_response.body)["ids"]
-    end
-  end
-
+  
 end

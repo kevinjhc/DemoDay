@@ -55,12 +55,18 @@
         <% if current_user %>
 
           <% if angellist_user? %>
-            <div class="small-6 columns no-left-padding">
-              <%= link_to "Follow On Angellist", { :controller => "pings", :action => "follow", :angellist_id => startup.angellist_id }, :class => 'button alert radius expand' %>
-            </div>
-            <div class="small-6 columns no-right-padding">
-              <%= link_to "Email Contact Info", { :controller => "pings", :action => "send_email", :id => startup.id }, :class => 'button alert radius expand' %>
-            </div>
+            <% if startup.angellist_id %>
+              <div class="small-6 columns no-left-padding">
+                <%= link_to "Follow On Angellist", { :controller => "pings", :action => "follow", :angellist_id => startup.angellist_id }, :class => 'button alert radius expand' %>
+              </div>
+              <div class="small-6 columns no-right-padding">
+                <%= link_to "Email Contact Info", { :controller => "pings", :action => "send_email", :id => startup.id }, :class => 'button alert radius expand' %>
+              </div>
+            <% else %>
+              <div class="small-12 columns no-right-padding">
+                <%= link_to "Email Contact Info", { :controller => "pings", :action => "send_email", :id => startup.id }, :class => 'button alert radius expand' %>
+              </div>
+            <% end %>
           <% else %>
             <div class="small-12 columns no-right-padding">
               <%= link_to "Email Contact Info", { :controller => "pings", :action => "send_email", :id => startup.id }, :class => 'button alert radius expand' %>
