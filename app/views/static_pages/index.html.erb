@@ -56,7 +56,7 @@
 
           <% if angellist_user? %>
             <% if startup.angellist_id %>
-              <div class="small-6 columns no-left-padding">
+              <div class="small-6 columns no-left-padding follow">
                 <%= link_to "Follow On Angellist", { :controller => "pings", :action => "follow", :angellist_id => startup.angellist_id }, :class => 'button alert radius expand' %>
               </div>
               <div class="small-6 columns no-right-padding">

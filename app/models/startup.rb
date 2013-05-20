@@ -4,5 +4,5 @@ class Startup < ActiveRecord::Base
   def img_url
     self.name.downcase + '.jpg'
   end
-
+  
 end
