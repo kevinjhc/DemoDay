@@ -78,7 +78,7 @@ $('#pull-from-angellist').on('click', function() {
 
 
 });
-*/
+
 
 $('#pull-from-angellist').on('click', function() {
   var angellist_id = $('#startup_angellist_id').val();
@@ -109,7 +109,39 @@ $('#pull-from-angellist').on('click', function() {
     // show error
   }
 });
+*/
 
+$('#pull-angellist-id').on('click', function() {
+  var angellist_name = $('#startup_name').val().toLowerCase();
+
+  if (angellist_name) {
+
+    $.ajax({
+      type: 'GET',
+      dataType: 'jsonp',
+      url: 'https://api.angel.co/1/startups/search?slug=' + angellist_name,
+      statusCode: {
+        404: function() {
+          alert('Company not found');
+        }
+      },
+      success: function(data) {
+        fillInIdField(data);
+      },
+      error: function() {
+        alert('Something went wrong with the Angellist API request.');
+      }
+    });
+
+    function fillInIdField(data) {
+      var id = data.id;
+      $('#startup_angellist_id').val(id);
+    }
+
+  } else {
+    alert('Please fill in the company name.');
+  }
+});
 
 $('.email-button').on('click', function(e) {
   e.preventDefault();

@@ -1,12 +1,13 @@
 Demoday::Application.routes.draw do
 
   root :to => 'static_pages#index'
-
   match '/map', to: 'static_pages#map'
 
   resources :startups
-  match '/follow', to: 'startups#follow'
-  match '/send_email', to: 'startups#send_email'
+
+  # Pings
+  match '/follow', to: 'pings#follow'
+  match '/send_email', to: 'pings#send_email'
 
   # Angellist Oauth
   match 'auth/:provider/callback', to: 'sessions#create'
@@ -16,7 +17,10 @@ Demoday::Application.routes.draw do
   # Omniauth Identities registration
   resources :identities
 
+  # Become an Admin
   match '/admin', to: 'admin#index'
   match '/become_admin', to: 'admin#become_admin'
+
+  match '/following', to: 'pings#following'
   
 end
