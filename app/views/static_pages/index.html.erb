@@ -23,7 +23,9 @@
       <div class="startup">
       
       <div class="row">
-        <%= image_tag(startup.img_url) %>
+        <% unless startup.img_url.empty? %>
+          <%= image_tag(startup.img_url) %>
+        <% end %>
 
         <h3 class="startup-name"><%= startup.name %></h3>
         <% if current_user && current_user.admin %>
