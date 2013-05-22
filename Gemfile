@@ -4,6 +4,8 @@ gem 'rails', '3.2.13'
 
 gem 'pg'
 
+gem "paperclip", "~> 3.0"
+
 gem 'omniauth-angellist'
 gem 'omniauth-identity'
 
