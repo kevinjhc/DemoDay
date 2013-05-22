@@ -67,6 +67,21 @@ body {
   width: 54px;
 }
 
+#startup_avatar {
+  -moz-box-sizing: border-box;
+    background-color: #FFFFFF;
+    border: 0 solid #CCCCCC;
+    box-shadow: none;
+    color: rgba(0, 0, 0, 0.75);
+    display: block;
+    font-family: inherit;
+    font-size: 0.875em;
+    height: 2.3125em;
+    margin: 0 auto;
+    padding: 0.5em;
+    transition: all 0.15s linear 0s;
+}
+
 /* Startup List */
 
 .startup {

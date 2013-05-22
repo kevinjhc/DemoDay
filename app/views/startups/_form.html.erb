@@ -9,7 +9,7 @@
 
     <div class="row">
       <div class="large-6 small-centered columns">
-        <%= f.label "Angellist Id:" %>
+        <%= f.label "Angellist Id: (company name required)" %>
         <%= f.text_field :angellist_id %>
       </div>
     </div>
@@ -28,11 +28,11 @@
       <%= f.label "Contact Email Address:" %>
       <%= f.text_field :email %>
 
-      <%= f.label "Image:" %>
-      <%= f.file_field :avatar %>
-
       <%= f.label "Presentation Order:" %>
       <%= f.text_field :presentation_order %>
+
+      <%= f.label "Image:" %>
+      <%= f.file_field :avatar %>
       
       <%= f.submit :class => 'button radius alert' %>
 
