@@ -17,6 +17,18 @@ class ApplicationController < ActionController::Base
   end
   helper_method :angellist_user?
 
+  def following_startup? startup_id
+    startup_id = startup_id
+    current_user.angellist_follows.where({ startup_id: startup_id }).empty?
+  end
+  helper_method :following_startup?
+
+  def sent_email? startup_id
+    startup_id = startup_id
+    current_user.email_contacts.where({ startup_id: startup_id }).empty?
+  end
+  helper_method :sent_email?
+
   protected
 
   def admin?

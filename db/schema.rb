@@ -11,7 +11,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130520160049) do
+ActiveRecord::Schema.define(:version => 20130522175454) do
+
+  create_table "angellist_follows", :force => true do |t|
+    t.integer  "startup_id"
+    t.integer  "user_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "email_contacts", :force => true do |t|
+    t.integer  "startup_id"
+    t.integer  "user_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "identities", :force => true do |t|
     t.string   "name"

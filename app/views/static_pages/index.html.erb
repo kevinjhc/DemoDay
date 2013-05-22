@@ -55,22 +55,47 @@
         <% if current_user %>
 
           <% if angellist_user? %>
+
             <% if startup.angellist_id %>
-              <div class="small-6 columns no-left-padding follow">
-                <%= link_to "Follow On Angellist", { :controller => "pings", :action => "follow", :angellist_id => startup.angellist_id }, :class => 'button alert radius expand' %>
+              <div class="small-6 columns no-left-padding">
+                <!--<%= link_to "Follow On Angellist", { :controller => "angellist_follows", :action => "create", :angellist_id => startup.angellist_id }, :class => 'button alert radius expand' %>-->
+                <!--<%= link_to "Follow On Angellist", angellist_follows_path(params: { angellist_id: startup.angellist_id }), :class => 'button alert radius expand follow', remote: true, :method => :post %>-->
+                <% if following_startup?(startup.id) %>
+                  <%= link_to "Follow On Angellist", '#', :class => 'button alert radius expand follow', :'data-angellist_id' => startup.angellist_id, :'data-startup_id' => startup.id %>
+                <% else %>
+                  <%= link_to "Following", '#', :class => 'button alert radius expand following', :'data-angellist_id' => startup.angellist_id, :'data-startup_id' => startup.id %>
+                <% end %>
               </div>
               <div class="small-6 columns no-right-padding">
-                <%= link_to "Email Contact Info", { :controller => "pings", :action => "send_email", :id => startup.id }, :class => 'button alert radius expand' %>
+                <!--<%= link_to "Email Contact Info", { :controller => "email_contacts", :action => "create", :id => startup.id }, :class => 'button alert radius expand email-ceo' %>-->
+                <% if sent_email?(startup.id) %>
+                  <%= link_to "Email Contact Info", '#', :class => 'button alert radius expand email-ceo', :'data-startup_id' => startup.id %>
+                <% else %>
+                  <%= link_to "Contacted", '#', :class => 'button alert radius expand email-ceo following', :'data-startup_id' => startup.id %>
+                <% end %>
               </div>
+
             <% else %>
+
               <div class="small-12 columns no-right-padding">
-                <%= link_to "Email Contact Info", { :controller => "pings", :action => "send_email", :id => startup.id }, :class => 'button alert radius expand' %>
+                <% if sent_email?(startup.id) %>
+                  <%= link_to "Email Contact Info", '#', :class => 'button alert radius expand email-ceo', :'data-startup_id' => startup.id %>
+                <% else %>
+                  <%= link_to "Contacted", '#', :class => 'button alert radius expand email-ceo following', :'data-startup_id' => startup.id %>
+                <% end %>
               </div>
+
             <% end %>
           <% else %>
+
             <div class="small-12 columns no-right-padding">
-              <%= link_to "Email Contact Info", { :controller => "pings", :action => "send_email", :id => startup.id }, :class => 'button alert radius expand' %>
+              <% if sent_email?(startup.id) %>
+                  <%= link_to "Email Contact Info", '#', :class => 'button alert radius expand email-ceo', :'data-startup_id' => startup.id %>
+                <% else %>
+                  <%= link_to "Contacted", '#', :class => 'button alert radius expand email-ceo following', :'data-startup_id' => startup.id %>
+                <% end %>
             </div>
+
           <% end %>
 
         <% else %>

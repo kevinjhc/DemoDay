@@ -1,6 +1,9 @@
 class User < ActiveRecord::Base
   attr_accessible :name, :oauth_token, :provider, :uid, :investor, :email, :bio, :linkedin, :twitter
 
+  has_many :angellist_follows
+  has_many :email_contacts
+
   def self.from_omniauth(auth)
     auth[:uid] = auth[:uid].to_s
     where(auth.slice(:provider, :uid)).first_or_initialize.tap do |user|
